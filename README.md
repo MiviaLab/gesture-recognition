@@ -3,7 +3,7 @@
 Implementation of the framework used in [Benchmarking deep neural networks for gesture recognition on embedded devices](link). The workflow is developed to perform a benchmarking focusing not only on the accuracy but also on the computational burden, involving two different architectures (2D and 3D), with two different backbones (MobileNet, ResNeXt) and four types of input modalities (RGB, Depth, Optical Flow, Motion History Image) and their combinations.
 The system performs gesture recognition following the following scheme.
 
-![alt text](https://github.com/MiviaLab/gesture_recognition/blob/main/figures/workflow.png)
+![alt text](https://github.com/MiviaLab/gesture-recognition/blob/main/figures/workflow.png)
 
 Modalities can refer to data acquired directly by sensors (RGB or Depth stream) or by pre-processing raw data so as to obtain for instance OF or MHI. Each modality feeds a deep learning based feature extractor, which takes into account both spatial and temporal information. Finally, the classification is performed over the different feature vectors extracted and a fusion at decision level is performed. The dashed edges of a module refers to the fact that it is not mandatory.
 
@@ -14,15 +14,15 @@ The results analyze are analyzed on ChaLearn LAP IsoGD and NVIDIA Dynamic Gestur
 The following tables show the experimental results in terms of \textit{percentage accuracy}. The analyzed modalities are: RGB, Depth (D), dense Optical Flow (OF), Motion History Image (MHI), and their combinations. Tested networks are 2D and 3D versions of MobileNet v2 and ResNeXt-101.
 
 ### ChaLearn LAP IsoGD
-![alt text](https://github.com/MiviaLab/gesture_recognition/blob/main/figures/isogd_results.png)
+![alt text](https://github.com/MiviaLab/gesture-recognition/blob/main/figures/isogd_results.png)
 
 ### NVIDIA Dynamic Gesture
-![alt text](https://github.com/MiviaLab/gesture_recognition/blob/main/figures/nvgesture_results.png)
+![alt text](https://github.com/MiviaLab/gesture-recognition/blob/main/figures/nvgesture_results.png)
 
 ### Computational Cost
 Memory requirements and time analysis for feature extraction and classification steps. The numbered columns, from 1 to 4, indicate the number of streams of the multi-stream network (one for each modality).
 
-![alt text](https://github.com/MiviaLab/gesture_recognition/blob/main/figures/comp_cost_results.png)
+![alt text](https://github.com/MiviaLab/gesture-recognition/blob/main/figures/comp_cost_results.png)
 
 ## Datasets
 The framework can work on any dataset, but the dataloaders have been implemented only for the most interesting datasets, namely: 20BN-Jester, ChaLearn LAP IsoGD, and NVIDIA Dynamic Gesture.
